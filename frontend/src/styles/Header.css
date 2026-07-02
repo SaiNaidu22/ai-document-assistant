@@ -1,0 +1,25 @@
+.header {
+
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 40px;
+
+}
+
+.header h1 {
+
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+
+}
+
+.header p {
+
+    font-size: 18px;
+
+    color: #cbd5e1;
+
+}
