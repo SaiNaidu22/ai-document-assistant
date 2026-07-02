@@ -1,5 +1,4 @@
 from google import genai
-from google.genai.errors import ServerError
 from dotenv import load_dotenv
 import os
 
@@ -29,14 +28,12 @@ say "I couldn't find that information in the uploaded document."
 
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash-lite",
+            model="gemini-2.5-flash",
             contents=prompt
         )
 
         return response.text
 
-    except ServerError:
-        return "The AI service is temporarily busy. Please try again in a few moments."
-
     except Exception as e:
-        return f"Unexpected error: {str(e)}"
+        print(f"Gemini Error: {e}")   # Shows error in Render logs
+        return f"Gemini Error: {str(e)}"
